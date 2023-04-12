@@ -16,4 +16,14 @@ struct People: Codable, Identifiable {
     var index: Int?
     var emailAddress: String?
     var description: String?
+
+    enum CodingKeys: String, CodingKey {
+        case avatar
+        case name
+        case phone
+        case isActive
+        case index
+        case emailAddress
+        case description
+    }
 }
