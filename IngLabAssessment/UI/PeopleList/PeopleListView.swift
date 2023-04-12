@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PeopleListView: View {
-    @State private var searchText = ""
+    @StateObject private var viewModel = PeopleListViewModel()
     var body: some View {
         VStack {
             HStack {
@@ -22,7 +22,7 @@ struct PeopleListView: View {
                 .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
 
             HStack {
-                TextField("Search", text: $searchText)
+                TextField("Search", text: $viewModel.search)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                 Button {
                     print("Button was tapped")

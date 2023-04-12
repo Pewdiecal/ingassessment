@@ -15,6 +15,7 @@
 		E8B021E929E6B92D00496445 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021E829E6B92D00496445 /* PeopleListView.swift */; };
 		E8B021EC29E6BB8000496445 /* PeopleListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */; };
 		E8B021F229E6C2FD00496445 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F129E6C2FD00496445 /* People.swift */; };
+		E8B021F429E6C3CF00496445 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E8B021E829E6B92D00496445 /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
 		E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCellView.swift; sourceTree = "<group>"; };
 		E8B021F129E6C2FD00496445 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E8B021E829E6B92D00496445 /* PeopleListView.swift */,
+				E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */,
 			);
 			path = PeopleList;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				E8B021D729E6A07A00496445 /* AuthView.swift in Sources */,
 				E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */,
 				E8B021E629E6AFCF00496445 /* AuthViewModel.swift in Sources */,
+				E8B021F429E6C3CF00496445 /* PeopleListViewModel.swift in Sources */,
 				E8B021E929E6B92D00496445 /* PeopleListView.swift in Sources */,
 				E8B021F229E6C2FD00496445 /* People.swift in Sources */,
 				E8B021EC29E6BB8000496445 /* PeopleListCellView.swift in Sources */,
