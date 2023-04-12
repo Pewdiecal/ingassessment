@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct People: Codable {
+struct People: Codable, Identifiable {
+    var id = UUID()
     var avatar: String?
     var name: String?
     var phone: String?
