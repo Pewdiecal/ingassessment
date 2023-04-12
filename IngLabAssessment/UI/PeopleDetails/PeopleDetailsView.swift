@@ -9,6 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct PeopleDetailsView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var name: String?
     var avatarUrl: String?
     var phoneNumber: String?
@@ -23,7 +24,7 @@ struct PeopleDetailsView: View {
 
             HStack {
                 Button {
-
+                    self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image("iconBack")
                         .resizable()
