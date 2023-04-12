@@ -43,6 +43,10 @@ struct PeopleListView: View {
                 Divider()
                     .listRowSeparator(.hidden)
             }
+            .border(.gray)
+            .background(.white)
+            .padding(20)
+            .scrollContentBackground(.hidden)
 
             Spacer()
         }
