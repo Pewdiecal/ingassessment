@@ -9,13 +9,6 @@ import SwiftUI
 import Kingfisher
 
 struct PeopleDetailsView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    var name: String?
-    var avatarUrl: String?
-    var phoneNumber: String?
-    var emailAddress: String?
-    var description: String?
-
     var body: some View {
         ZStack {
             VStack {
@@ -102,6 +95,13 @@ struct PeopleDetailsView: View {
             .navigationBarHidden(true)
         }
     }
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var name: String?
+    var avatarUrl: String?
+    var phoneNumber: String?
+    var emailAddress: String?
+    var description: String?
 }
 
 struct PeopleDetailsView_Previews: PreviewProvider {

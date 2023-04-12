@@ -10,7 +10,11 @@ import Combine
 
 class NetworkService {
 
+    // MARK: - Initializations
+
     init() {}
+
+    // MARK: - Actions
 
     func retrievePeopleListFromApi() -> AnyPublisher<[People], Error> {
         if let url = URL(string: peopleApiUrl) {
@@ -25,6 +29,7 @@ class NetworkService {
     }
 
     // MARK: - Internals
+
     private let peopleApiUrl = "https://6436ad8e3e4d2b4a12d8bd17.mockapi.io/users"
     private var cancellables = [AnyCancellable]()
 }

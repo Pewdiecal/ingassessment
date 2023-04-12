@@ -17,6 +17,8 @@ struct People: Codable, Identifiable {
     var emailAddress: String?
     var description: String?
 
+    // MARK: - CodingKeys
+
     enum CodingKeys: String, CodingKey {
         case avatar
         case name

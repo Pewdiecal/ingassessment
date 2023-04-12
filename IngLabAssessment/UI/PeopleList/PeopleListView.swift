@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PeopleListView: View {
-    @StateObject private var viewModel = PeopleListViewModel(networkService: NetworkService())
     var body: some View {
         ZStack {
             VStack {
@@ -86,6 +85,8 @@ struct PeopleListView: View {
             .navigationBarHidden(true)
         }
     }
+
+    @StateObject private var viewModel = PeopleListViewModel(networkService: NetworkService())
 }
 
 struct PeopleListView_Previews: PreviewProvider {

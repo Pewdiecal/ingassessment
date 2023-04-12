@@ -8,6 +8,9 @@
 import Foundation
 
 @MainActor class AuthViewModel: ObservableObject {
+
+    // MARK: - Properties
+    
     @Published var username = ""
     @Published var password = ""
     @Published var isSecured = true

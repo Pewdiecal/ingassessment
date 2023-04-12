@@ -9,10 +9,6 @@ import SwiftUI
 import Kingfisher
 
 struct PeopleListCellView: View {
-    var imageUrlString: String
-    var name: String
-    var phoneNumber: String
-
     var body: some View {
         HStack {
             KFImage(URL(string: imageUrlString)!)
@@ -37,6 +33,10 @@ struct PeopleListCellView: View {
             Spacer()
         }
     }
+
+    var imageUrlString: String
+    var name: String
+    var phoneNumber: String
 }
 
 struct PeopleListCellView_Previews: PreviewProvider {

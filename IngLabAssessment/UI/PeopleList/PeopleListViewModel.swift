@@ -10,6 +10,8 @@ import Combine
 
 @MainActor class PeopleListViewModel: ObservableObject {
 
+    // MARK: - Initializations
+
     init(networkService: NetworkService) {
         self.networkService = networkService
         getPeopleList()
@@ -32,6 +34,8 @@ import Combine
             }
             .store(in: &cancellables)
     }
+
+    // MARK: - Actions
 
     private func getPeopleList() {
         networkService.retrievePeopleListFromApi()
