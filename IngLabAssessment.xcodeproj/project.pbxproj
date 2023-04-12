@@ -11,6 +11,7 @@
 		E8B021D729E6A07A00496445 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021D629E6A07A00496445 /* AuthView.swift */; };
 		E8B021D929E6A07B00496445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B021D829E6A07B00496445 /* Assets.xcassets */; };
 		E8B021DC29E6A07B00496445 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B021DB29E6A07B00496445 /* Preview Assets.xcassets */; };
+		E8B021E629E6AFCF00496445 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021E529E6AFCF00496445 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E8B021D629E6A07A00496445 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		E8B021D829E6A07B00496445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B021DB29E6A07B00496445 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8B021E529E6AFCF00496445 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				E8B021D629E6A07A00496445 /* AuthView.swift */,
+				E8B021E529E6AFCF00496445 /* AuthViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				E8B021D729E6A07A00496445 /* AuthView.swift in Sources */,
 				E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */,
+				E8B021E629E6AFCF00496445 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

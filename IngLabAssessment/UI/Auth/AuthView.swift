@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct AuthView: View {
-    @State private var username: String = ""
-    @State private var password: String = ""
+    @StateObject private var viewModel = AuthViewModel()
+
     var body: some View {
         VStack {
             HStack {
@@ -33,7 +33,7 @@ struct AuthView: View {
                     .resizable()
                     .frame(width: 30, height: 30)
                     .padding(10)
-                TextField("Username", text: $username)
+                TextField("Username", text: $viewModel.username)
             }
             .background()
             .border(.gray)
@@ -44,7 +44,7 @@ struct AuthView: View {
                     .resizable()
                     .frame(width: 30, height: 30)
                     .padding(10)
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $viewModel.password)
                 Button {
                     print("Button was tapped")
                 } label: {
