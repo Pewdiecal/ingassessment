@@ -54,6 +54,7 @@ struct PeopleDetailsView: View {
                 Text(phoneNumber ?? "")
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
+                    .lineLimit(1)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
             }
@@ -69,6 +70,7 @@ struct PeopleDetailsView: View {
                 Text(emailAddress ?? "")
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
+                    .lineLimit(1)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
             }
