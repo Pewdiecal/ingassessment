@@ -17,85 +17,90 @@ struct PeopleDetailsView: View {
     var description: String?
 
     var body: some View {
-        VStack {
-            HStack {
+        ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                }
                 Spacer()
             }
+            .background(
+                Image("background")
+                    .resizable()
+            )
+            .ignoresSafeArea()
 
-            HStack {
-                Button {
-                    self.presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Image("iconBack")
+            VStack {
+                HStack {
+                    Button {
+                        self.presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image("iconBack")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    }
+
+                    Spacer()
+
+                    Text(name ?? "")
+                        .fontWeight(.black)
+                        .font(.system(size: 25))
+                        .foregroundColor(.gray)
+
+                    Spacer()
+                }
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 30))
+
+                KFImage(URL(string: avatarUrl ?? "")!)
+                    .resizable()
+                    .frame(width: 128, height: 128)
+
+                HStack {
+                    Image("iconCall")
                         .resizable()
                         .frame(width: 30, height: 30)
+                        .padding(10)
+                    Text(phoneNumber ?? "")
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
                 }
+                .background()
+                .border(.cyan)
+                .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+
+                HStack {
+                    Image("iconMail")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .padding(10)
+                    Text(emailAddress ?? "")
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                        .lineLimit(1)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
+                }
+                .background()
+                .border(.cyan)
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
+                Text(description ?? "")
+                    .padding(10)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .background(.white)
+                    .border(.gray)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(100)
+
 
                 Spacer()
-
-                Text(name ?? "")
-                    .fontWeight(.black)
-                    .font(.system(size: 25))
-                    .foregroundColor(.gray)
-
-                Spacer()
             }
-            .padding(EdgeInsets(top: 70, leading: 10, bottom: 0, trailing: 30))
-
-            KFImage(URL(string: avatarUrl ?? "")!)
-                .resizable()
-                .frame(width: 128, height: 128)
-
-            HStack {
-                Image("iconCall")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(10)
-                Text(phoneNumber ?? "")
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
-                    .lineLimit(1)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
-            }
-            .background()
-            .border(.cyan)
-            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
-
-            HStack {
-                Image("iconMail")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .padding(10)
-                Text(emailAddress ?? "")
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
-                    .lineLimit(1)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 50))
-            }
-            .background()
-            .border(.cyan)
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-
-            Text(description ?? "")
-                .padding(10)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .background(.white)
-                .border(.gray)
-                .padding(20)
-                .multilineTextAlignment(.leading)
-                .lineLimit(100)
-
-
-            Spacer()
+            .navigationBarHidden(true)
         }
-        .background(
-            Image("background")
-                .resizable()
-        )
-        .ignoresSafeArea()
-        .navigationBarHidden(true)
     }
 }
 

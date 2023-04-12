@@ -17,7 +17,7 @@ struct PeopleListCellView: View {
         HStack {
             KFImage(URL(string: imageUrlString)!)
                 .resizable()
-                .frame(width: 100, height: 100)
+                .frame(width: 128, height: 128)
 
             VStack {
                 Text(name)
@@ -28,8 +28,9 @@ struct PeopleListCellView: View {
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 Text(phoneNumber)
                     .fontWeight(.regular)
-                    .font(.system(size: 20))
+                    .font(.system(size: 15))
                     .foregroundColor(.gray)
+                    .lineLimit(1)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
