@@ -39,20 +39,28 @@ struct PeopleListView: View {
 
             List {
                 ForEach(viewModel.peoples) { people in
-                    PeopleListCellView(imageUrlString: people.avatar ?? "", name: people.name ?? "", phoneNumber: people.phone ?? "")
+                    ZStack {
+                        NavigationLink {
+                            PeopleDetailsView(name: people.name,
+                                              avatarUrl: people.avatar,
+                                              phoneNumber: people.phone,
+                                              emailAddress: people.emailAddress,
+                                              description: people.description)
+                        } label: {
+                            EmptyView()
+                        }
+                        .opacity(0.0)
                         .listRowSeparator(.hidden)
-                    NavigationLink {
-                        PeopleDetailsView(name: people.name,
-                                          avatarUrl: people.avatar,
-                                          phoneNumber: people.phone,
-                                          emailAddress: people.emailAddress,
-                                          description: people.description)
-                    } label: {
-                        EmptyView()
-                    }
 
-                    Divider()
+                        VStack {
+                            PeopleListCellView(imageUrlString: people.avatar ?? "", name: people.name ?? "", phoneNumber: people.phone ?? "")
+                                .listRowSeparator(.hidden)
+                            Divider()
+                                .listRowSeparator(.hidden)
+                        }
                         .listRowSeparator(.hidden)
+                    }
+                    .listRowSeparator(.hidden)
                 }
             }
             .border(.gray)
