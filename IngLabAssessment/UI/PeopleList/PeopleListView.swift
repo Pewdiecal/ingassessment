@@ -38,10 +38,12 @@ struct PeopleListView: View {
             .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
 
             List {
-                PeopleListCellView(imageUrlString: "", name: "asdas", phoneNumber: "asdasd")
-                    .listRowSeparator(.hidden)
-                Divider()
-                    .listRowSeparator(.hidden)
+                ForEach(viewModel.peoples) { people in
+                    PeopleListCellView(imageUrlString: people.avatar ?? "", name: people.name ?? "", phoneNumber: people.phone ?? "")
+                        .listRowSeparator(.hidden)
+                    Divider()
+                        .listRowSeparator(.hidden)
+                }
             }
             .border(.gray)
             .background(.white)
