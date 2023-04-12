@@ -17,6 +17,7 @@
 		E8B021F229E6C2FD00496445 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F129E6C2FD00496445 /* People.swift */; };
 		E8B021F429E6C3CF00496445 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */; };
 		E8B021F729E6C5D100496445 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F629E6C5D100496445 /* NetworkService.swift */; };
+		E8B021FA29E6CA7A00496445 /* PeopleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F929E6CA7A00496445 /* PeopleDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E8B021F129E6C2FD00496445 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
 		E8B021F629E6C5D100496445 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E8B021F929E6CA7A00496445 /* PeopleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				E8B021D429E6A07A00496445 /* IngLabAssessmentApp.swift */,
 				E8B021E229E6A32300496445 /* Auth */,
 				E8B021E729E6B91400496445 /* PeopleList */,
+				E8B021F829E6CA5900496445 /* PeopleDetails */,
 				E8B021EA29E6BB6300496445 /* Common */,
 			);
 			path = UI;
@@ -147,6 +150,14 @@
 				E8B021F629E6C5D100496445 /* NetworkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		E8B021F829E6CA5900496445 /* PeopleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E8B021F929E6CA7A00496445 /* PeopleDetailsView.swift */,
+			);
+			path = PeopleDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B021FA29E6CA7A00496445 /* PeopleDetailsView.swift in Sources */,
 				E8B021D729E6A07A00496445 /* AuthView.swift in Sources */,
 				E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */,
 				E8B021F729E6C5D100496445 /* NetworkService.swift in Sources */,
