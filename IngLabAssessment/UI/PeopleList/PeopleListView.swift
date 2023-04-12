@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PeopleListView: View {
-    @StateObject private var viewModel = PeopleListViewModel()
+    @StateObject private var viewModel = PeopleListViewModel(networkService: NetworkService())
     var body: some View {
         VStack {
             HStack {
@@ -41,6 +41,16 @@ struct PeopleListView: View {
                 ForEach(viewModel.peoples) { people in
                     PeopleListCellView(imageUrlString: people.avatar ?? "", name: people.name ?? "", phoneNumber: people.phone ?? "")
                         .listRowSeparator(.hidden)
+                    NavigationLink {
+                        PeopleDetailsView(name: people.name,
+                                          avatarUrl: people.avatar,
+                                          phoneNumber: people.phone,
+                                          emailAddress: people.emailAddress,
+                                          description: people.description)
+                    } label: {
+                        EmptyView()
+                    }
+
                     Divider()
                         .listRowSeparator(.hidden)
                 }
