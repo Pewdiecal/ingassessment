@@ -17,7 +17,7 @@ struct PeopleListCellView: View {
         HStack {
             KFImage(URL(string: imageUrlString)!)
                 .resizable()
-                .frame(width: 128, height: 128)
+                .frame(width: 100, height: 100)
 
             VStack {
                 Text(name)
