@@ -10,4 +10,5 @@ import Foundation
 @MainActor class AuthViewModel: ObservableObject {
     @Published var username = ""
     @Published var password = ""
+    @Published var isSecured = true
 }

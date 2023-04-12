@@ -9,8 +9,6 @@ import SwiftUI
 
 struct AuthView: View {
     @StateObject private var viewModel = AuthViewModel()
-    @State private var isActive = false
-    @State private var selection : String? = ""
 
     var body: some View {
         NavigationStack {
@@ -47,11 +45,17 @@ struct AuthView: View {
                         .resizable()
                         .frame(width: 30, height: 30)
                         .padding(10)
-                    SecureField("Password", text: $viewModel.password)
+
+                    if viewModel.isSecured {
+                        SecureField("Password", text: $viewModel.password)
+                    } else {
+                        TextField("Password", text: $viewModel.password)
+                    }
+
                     Button {
-                        print("Button was tapped")
+                        viewModel.isSecured.toggle()
                     } label: {
-                        Image("iconEyeClose")
+                        Image(viewModel.isSecured ? "iconEyeClose" : "iconEyeOpen")
                             .resizable()
                             .frame(width: 30, height: 30)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
