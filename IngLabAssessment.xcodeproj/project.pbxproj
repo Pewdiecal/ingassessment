@@ -16,6 +16,7 @@
 		E8B021EC29E6BB8000496445 /* PeopleListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */; };
 		E8B021F229E6C2FD00496445 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F129E6C2FD00496445 /* People.swift */; };
 		E8B021F429E6C3CF00496445 /* PeopleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */; };
+		E8B021F729E6C5D100496445 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F629E6C5D100496445 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCellView.swift; sourceTree = "<group>"; };
 		E8B021F129E6C2FD00496445 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		E8B021F329E6C3CF00496445 /* PeopleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModel.swift; sourceTree = "<group>"; };
+		E8B021F629E6C5D100496445 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				E8B021E329E6A37900496445 /* UI */,
 				E8B021F029E6C2EA00496445 /* Model */,
+				E8B021F529E6C5C100496445 /* Service */,
 				E8B021E429E6A38400496445 /* Resources */,
 				E8B021DA29E6A07B00496445 /* Preview Content */,
 			);
@@ -138,6 +141,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E8B021F529E6C5C100496445 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E8B021F629E6C5D100496445 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,6 +221,7 @@
 			files = (
 				E8B021D729E6A07A00496445 /* AuthView.swift in Sources */,
 				E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */,
+				E8B021F729E6C5D100496445 /* NetworkService.swift in Sources */,
 				E8B021E629E6AFCF00496445 /* AuthViewModel.swift in Sources */,
 				E8B021F429E6C3CF00496445 /* PeopleListViewModel.swift in Sources */,
 				E8B021E929E6B92D00496445 /* PeopleListView.swift in Sources */,
