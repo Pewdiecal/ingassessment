@@ -25,6 +25,6 @@ class NetworkService {
     }
 
     // MARK: - Internals
-    private let peopleApiUrl = ""
+    private let peopleApiUrl = "https://6436ad8e3e4d2b4a12d8bd17.mockapi.io/users"
     private var cancellables = [AnyCancellable]()
 }
