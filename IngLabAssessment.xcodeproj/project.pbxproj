@@ -14,6 +14,7 @@
 		E8B021E629E6AFCF00496445 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021E529E6AFCF00496445 /* AuthViewModel.swift */; };
 		E8B021E929E6B92D00496445 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021E829E6B92D00496445 /* PeopleListView.swift */; };
 		E8B021EC29E6BB8000496445 /* PeopleListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */; };
+		E8B021F229E6C2FD00496445 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021F129E6C2FD00496445 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E8B021E529E6AFCF00496445 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E8B021E829E6B92D00496445 /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
 		E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCellView.swift; sourceTree = "<group>"; };
+		E8B021F129E6C2FD00496445 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				E8B021E329E6A37900496445 /* UI */,
+				E8B021F029E6C2EA00496445 /* Model */,
 				E8B021E429E6A38400496445 /* Resources */,
 				E8B021DA29E6A07B00496445 /* Preview Content */,
 			);
@@ -122,6 +125,14 @@
 				E8B021EB29E6BB8000496445 /* PeopleListCellView.swift */,
 			);
 			path = PeopleListCell;
+			sourceTree = "<group>";
+		};
+		E8B021F029E6C2EA00496445 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8B021F129E6C2FD00496445 /* People.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */,
 				E8B021E629E6AFCF00496445 /* AuthViewModel.swift in Sources */,
 				E8B021E929E6B92D00496445 /* PeopleListView.swift in Sources */,
+				E8B021F229E6C2FD00496445 /* People.swift in Sources */,
 				E8B021EC29E6BB8000496445 /* PeopleListCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
