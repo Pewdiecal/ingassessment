@@ -55,6 +55,7 @@ struct PeopleListView: View {
                 .resizable()
         )
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 

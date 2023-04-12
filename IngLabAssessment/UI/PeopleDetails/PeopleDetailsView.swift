@@ -91,6 +91,7 @@ struct PeopleDetailsView: View {
                 .resizable()
         )
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 
