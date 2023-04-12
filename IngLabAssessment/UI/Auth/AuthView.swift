@@ -18,7 +18,7 @@ struct AuthView: View {
 
             Image("IngAppLogo")
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 150, height: 150)
                 .scaledToFill()
                 .padding(EdgeInsets(top: 120, leading: 0, bottom: 0, trailing: 0))
 
@@ -71,6 +71,7 @@ struct AuthView: View {
             }
             .frame(height: 49)
             .background(.cyan)
+            .border(.gray)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 50, trailing: 20))
         }
         .background(
