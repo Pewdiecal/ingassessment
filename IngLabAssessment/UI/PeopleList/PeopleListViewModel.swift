@@ -18,14 +18,14 @@ import Combine
                 guard let self = self else { return }
                 var sortedPeoples: [People] = []
 
-                for people in self.peoples {
+                for people in self.totalPeoples {
                     if (people.name ?? "").contains(searchString) {
                         sortedPeoples.append(people)
                     }
                 }
 
                 if searchString.isEmpty {
-                    self.getPeopleList()
+                    self.peoples = self.totalPeoples
                 } else {
                     self.peoples = sortedPeoples
                 }
@@ -52,6 +52,7 @@ import Combine
                     .sorted(by: { lhs, rhs in
                         return lhs.index ?? 0 < rhs.index ?? 0
                     })
+                self.totalPeoples = self.peoples
             }
             .store(in: &cancellables)
     }
@@ -64,6 +65,7 @@ import Combine
     // MARK: - Internals
 
     private let networkService: NetworkService
+    private var totalPeoples: [People] = []
     private var cancellables = [AnyCancellable]()
     
 }
