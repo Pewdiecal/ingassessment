@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PeopleListCellView: View {
     var imageUrlString: String
@@ -14,8 +15,10 @@ struct PeopleListCellView: View {
 
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: imageUrlString))
-                .frame(width: 90, height: 90)
+            KFImage(URL(string: imageUrlString)!)
+                .resizable()
+                .frame(width: 128, height: 128)
+
             VStack {
                 Text(name)
                     .fontWeight(.bold)

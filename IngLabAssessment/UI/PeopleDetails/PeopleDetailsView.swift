@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PeopleDetailsView: View {
-    var name: String
-    var avatarUrl: String
-    var phoneNumber: String
-    var emailAddress: String
-    var description: String
+    var name: String?
+    var avatarUrl: String?
+    var phoneNumber: String?
+    var emailAddress: String?
+    var description: String?
 
     var body: some View {
         VStack {
@@ -31,7 +32,7 @@ struct PeopleDetailsView: View {
 
                 Spacer()
 
-                Text(name)
+                Text(name ?? "")
                     .fontWeight(.black)
                     .font(.system(size: 25))
                     .foregroundColor(.gray)
@@ -40,16 +41,16 @@ struct PeopleDetailsView: View {
             }
             .padding(EdgeInsets(top: 70, leading: 10, bottom: 0, trailing: 30))
 
-            AsyncImage(url: URL(string: avatarUrl))
-                .frame(width: 150, height: 150)
-                .border(.gray)
+            KFImage(URL(string: avatarUrl ?? "")!)
+                .resizable()
+                .frame(width: 128, height: 128)
 
             HStack {
                 Image("iconCall")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .padding(10)
-                Text(phoneNumber)
+                Text(phoneNumber ?? "")
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -64,7 +65,7 @@ struct PeopleDetailsView: View {
                     .resizable()
                     .frame(width: 30, height: 30)
                     .padding(10)
-                Text(emailAddress)
+                Text(emailAddress ?? "")
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -74,14 +75,14 @@ struct PeopleDetailsView: View {
             .border(.cyan)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
-            Text(description)
+            Text(description ?? "")
                 .padding(10)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .background(.white)
                 .border(.gray)
                 .padding(20)
                 .multilineTextAlignment(.leading)
-                .lineLimit(0)
+                .lineLimit(100)
 
 
             Spacer()
