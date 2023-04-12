@@ -16,12 +16,19 @@ import Combine
         self.$search
             .sink { [weak self] searchString in
                 guard let self = self else { return }
-                var sortedPeoples: [People]
-                sortedPeoples = self.peoples
-                    .filter { people in
-                        return people.name == searchString
+                var sortedPeoples: [People] = []
+
+                for people in self.peoples {
+                    if (people.name ?? "").contains(searchString) {
+                        sortedPeoples.append(people)
                     }
-                self.peoples = sortedPeoples
+                }
+
+                if searchString.isEmpty {
+                    self.getPeopleList()
+                } else {
+                    self.peoples = sortedPeoples
+                }
             }
             .store(in: &cancellables)
     }
