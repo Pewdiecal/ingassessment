@@ -37,7 +37,14 @@ import Combine
                 }
             } receiveValue: { [weak self] peoples in
                 guard let self = self else { return }
+
                 self.peoples = peoples
+                    .filter { people in
+                        return people.isActive ?? false
+                    }
+                    .sorted(by: { lhs, rhs in
+                        return lhs.index ?? 0 < rhs.index ?? 0
+                    })
             }
             .store(in: &cancellables)
     }
