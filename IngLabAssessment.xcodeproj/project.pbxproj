@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021D429E6A07A00496445 /* IngLabAssessmentApp.swift */; };
-		E8B021D729E6A07A00496445 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021D629E6A07A00496445 /* ContentView.swift */; };
+		E8B021D729E6A07A00496445 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B021D629E6A07A00496445 /* AuthView.swift */; };
 		E8B021D929E6A07B00496445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B021D829E6A07B00496445 /* Assets.xcassets */; };
 		E8B021DC29E6A07B00496445 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B021DB29E6A07B00496445 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		E8B021D129E6A07A00496445 /* IngLabAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngLabAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B021D429E6A07A00496445 /* IngLabAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngLabAssessmentApp.swift; sourceTree = "<group>"; };
-		E8B021D629E6A07A00496445 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8B021D629E6A07A00496445 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		E8B021D829E6A07B00496445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B021DB29E6A07B00496445 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,9 +51,8 @@
 		E8B021D329E6A07A00496445 /* IngLabAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				E8B021D429E6A07A00496445 /* IngLabAssessmentApp.swift */,
-				E8B021D629E6A07A00496445 /* ContentView.swift */,
-				E8B021D829E6A07B00496445 /* Assets.xcassets */,
+				E8B021E329E6A37900496445 /* UI */,
+				E8B021E429E6A38400496445 /* Resources */,
 				E8B021DA29E6A07B00496445 /* Preview Content */,
 			);
 			path = IngLabAssessment;
@@ -65,6 +64,31 @@
 				E8B021DB29E6A07B00496445 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E8B021E229E6A32300496445 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E8B021D629E6A07A00496445 /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E8B021E329E6A37900496445 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E8B021D429E6A07A00496445 /* IngLabAssessmentApp.swift */,
+				E8B021E229E6A32300496445 /* Auth */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E8B021E429E6A38400496445 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8B021D829E6A07B00496445 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B021D729E6A07A00496445 /* ContentView.swift in Sources */,
+				E8B021D729E6A07A00496445 /* AuthView.swift in Sources */,
 				E8B021D529E6A07A00496445 /* IngLabAssessmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
